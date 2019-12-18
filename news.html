@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="icon" href="/static/weixin/img/jixiangwu.png" type="image/x-icon"> -->
+    <title>新闻列表</title>
+
+    <!-- 公共样式 -->
+    <link rel="stylesheet" href="./css/reset.min.css">
+
+    <!-- pc端样式 -->
+    <link rel="stylesheet" href="./css/newlist.css">
+
+
+    <script>
+     ~function () {
+            computedFont();
+            window.addEventListener('resize', computedFont, false);
+            function computedFont() {
+                var deviceW = document.documentElement.clientWidth;
+                if (deviceW > 640) return;
+                document.documentElement.style.fontSize = deviceW / 640 * 100 + 'px';
+            }
+        }();
+    </script>
+
+<body>
+    <!-- 头部 -->
+    <div id="romvoe"></div>
+    <div class="content main">
+        <!-- <h1>新闻列表页</h1> -->
+        <ul class="list">
+            <div class="bg_color" onclick="deleteLogin()" id="bg_filter" style="display: none;"></div>
+        </ul>
+    </div>
+    <div id="box">
+        <img src="../img/返回顶部.png" alt="">
+    </div>·
+    <div id="loading">
+        <img src="../img/loading.gif" alt="">
+    </div>
+    <div id="load" style="display: none">我还是有底线的</div>
+
+    <script src="./js/jquery-1.10.2.js"></script>
+    <!-- <script src="/static/home/js/jquery.cookie.js"></script> -->
+    <script src="./js/newlist.js"></script>
+    <!--<script src="/static/weixin/js/pull.js"></script>-->
+
+<script>
+
+
+</script>
+</body>
+
+
+</html>

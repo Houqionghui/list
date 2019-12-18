@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>详情页</title>
+    <!-- pc端样式 -->
+    <link rel="stylesheet" href="/static/weixin/css/details.css">
+    <!-- 公共样式 -->
+    <link rel="stylesheet" href="/static/weixin/css/reset.min.css">
+    <!-- 手机端 -->
+    <script src="/static/weixin/js/jquery-1.9.0.min.js"></script>
+    <script src="/static/home/js/jquery.cookie.js"></script>
+    <script src="/static/weixin/js/news_details.js"></script>
+    <script>
+     ~function () {
+            computedFont();
+            window.addEventListener('resize', computedFont, false);
+            function computedFont() {
+                var deviceW = document.documentElement.clientWidth;
+                if (deviceW > 640) return;
+                document.documentElement.style.fontSize = deviceW / 640 * 100 + 'px';
+            }
+        }();
+    </script>
+</head>
+
+
+<body>
+<div id="awaitIng">
+    <div class="Popout" id="popout">
+
+    </div>
+</div>
+
+
+
+    <div class="contentbox main">
+        <div class="share-let">
+            <div>分享</div>
+            <div class="images">
+                <div class="images-box">
+                    <a href=""><img class="img2" src="/static/weixin/img/weibo.png" alt=""></a>
+                    <a href=""><img class="img1" src="/static/weixin/img/weixin.png" alt=""></a>
+                </div>
+
+
+            </div>
+        </div>
+     <div class="content">
+        <div class="title">{{ news_title }}</div>
+        <div class="time">
+            <span class="yuanc">{{ news_author }}</span>
+            <span>{{ news_type }}</span>
+            <span>{{ news_pubdate }}</span>
+
+        </div>
+        {% for content in news_content %}
+            {% if ".jpg" in content or '.jpeg' in content or '.png' in content or 'http://' in content or 'https://' in content %}
+                <img src="{{ content }}" />
+            {% elif content == "" %}
+
+            {% else %}
+                <p>
+                {{ content }}
+                </p><br>
+            {% endif %}
+        {% endfor %}
+
+    </div>
+
+
+     </div>
+    <!--<div class="base" id="{{ news_id }}">-->
+        <!--<div class="collect">-->
+            <!--<img src="/static/weixin/img/收藏.png" alt="">-->
+            <!--<span>收藏</span>-->
+        <!--</div>-->
+            <!--{% if is_thumbs == True %}-->
+                <!--<div class="like" >-->
+                    <!--<span>{{ thumbs_number }}</span>-->
+                   <!--<img src="/static/weixin/img/点赞.png" alt="" >-->
+
+                <!--</div>-->
+            <!--{% else %}-->
+                <!--<div class="like" onclick="thumbs(this)">-->
+                <!--<span>点赞</span>-->
+                <!--<img src="/static/weixin/img/点赞.png" alt="" >-->
+                <!--</div>-->
+            <!--{% endif %}-->
+
+
+            <!--<div class="intransit ">-->
+               <!--分享到:-->
+            <!--<a href=""><img class="img2" src="/static/weixin/img/weibo.png" alt=""></a>-->
+             <!--<a href=""><img class="img1" src="/static/weixin/img/weixin.png" alt=""></a>-->
+
+            <!--</div>-->
+
+
+
+    <!--</div>-->
+
+
+    <div class="intransit" id="{{ news_id }}">
+            <div class=" baseBox clearfix">
+                <div class="collect clearfix">
+                    <img src="/static/weixin/img/收藏.png" alt="">
+                    <span>收藏</span>
+                </div>
+                {% if is_thumbs == True %}
+                    <div class="like clearfix ">
+                        <img src="/static/weixin/img/点赞.png" alt="">
+                        <span>{{ thumbs_number }}</span>
+                    </div>
+                {% else %}
+                    <div class="like clearfix ">
+                        <img src="/static/weixin/img/点赞.png" alt="">
+                        <span>点赞</span>
+                    </div>
+                {% endif %}
+            </div>
+
+         <div class="intransitBox">
+            分享到:
+            <a href=""><img class="img2" src="/static/weixin/img/weibo.png" alt=""></a>
+             <a href=""><img class="img1" src="/static/weixin/img/weixin.png" alt=""></a>
+
+         </div>
+     </div>
+    <div class="zhanwei"></div>
+
+    <script>
+
+        // let popout=document.getElementById('popout');
+        // console.log(popout);
+        //
+        // popout.innerHTML=str;
+        // popout.style.display='block';
+    </script>
+
+
+</body>
+
+
+</html>

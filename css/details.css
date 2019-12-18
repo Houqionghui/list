@@ -1,0 +1,142 @@
+html{
+    font-size: 100px
+}
+
+.share-let{
+    display:none
+}
+.content{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+
+}
+.content .title{
+font-size: .34rem;
+}
+
+.base{
+    margin-bottom: .4rem;
+}
+.baseBox{
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 0.15rem;
+    padding-left:1rem ;
+
+}
+.baseBox span{
+    display: none;
+}
+.time{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: .1rem;
+    margin-bottom: .1rem;
+    margin-top: .3rem;
+    color: #c3c3c3;
+    font-size: 14px;
+
+}
+.content img{
+    width: 100%;
+    display: block;
+    margin:0 auto;
+}
+
+.content p{
+    font-size: 0.25rem;
+    line-height: 28px;
+
+}
+.collect{
+    float: right;
+    padding-right: .4rem;
+    padding-top: 0.01rem;
+}
+
+.collect img{
+    width: .4rem;
+    vertical-align: middle;
+}
+
+.collect span{
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+.like{
+float: right;
+padding-right: .2rem;
+}
+
+.like span{
+    font-size: 16px;
+    vertical-align: bottom;
+}
+
+.like img{
+    width: .4rem;
+    vertical-align: bottom;
+    padding-right: .3rem;
+}
+.intransit {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    border-top: 1px solid rgba(204, 204, 204, 0.226);
+}
+
+.intransit a img{
+    width: .4rem;
+    vertical-align: middle;
+    padding-right: .1rem;
+    padding-left: .1rem;
+}
+
+.intransitBox{
+    font-size: 16px;
+    line-height: 50px;
+    float: right;
+    margin-right: 1rem;
+}
+.zhanwei{
+    height: 50px;
+}
+
+#awaitIng{
+    position: fixed;
+     top: 0;
+     width: 100%;
+     height: 100vh;
+     background-color:rgba(33, 35, 36, 0.829);
+     opacity: 1;
+    z-index: 990;
+    display: none;
+}
+
+.Popout{
+    width: 210px;
+    min-height: 100px;
+    background:rgba(255,255,255,1);
+    border:0px solid rgba(0,0,0,1);
+    margin: 0 auto;
+    position: relative;
+    top: 30%;
+    border-radius: 5px;
+
+}
+.Popout .Popout-text{
+    width: 180px;
+    height: 50px;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 16px;
+    padding-top: 14px;
+    line-height: 24px;
+
+}
+.Popout .Popout-text span{
+    color: red;
+}
